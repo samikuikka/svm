@@ -8,11 +8,11 @@ from cvxopt import matrix, solvers
 np.random.seed(42)
 n_samples = 50
 
-# Class -1 (centered at (-1, -1) with increased noise)
+# Class -1
 X1 = np.random.randn(n_samples, 2) * 1.0 + np.array([-1, -1])
 y1 = -1 * np.ones(n_samples)
 
-# Class +1 (centered at (1, 1) with increased noise)
+# Class +1 
 X2 = np.random.randn(n_samples, 2) * 1.0 + np.array([1, 1])
 y2 = np.ones(n_samples)
 
