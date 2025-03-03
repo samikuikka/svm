@@ -5,18 +5,17 @@ import matplotlib.pyplot as plt
 # Generate synthetic 2D data (same as before)
 # -------------------------------------------------------
 np.random.seed(42)
-
 n_samples = 50
 
-# Class -1
-X1 = np.random.randn(n_samples, 2) * 0.8 + np.array([-2, -2])
+# Class -1 (centered at (-1, -1) with increased noise)
+X1 = np.random.randn(n_samples, 2) * 1.0 + np.array([-1, -1])
 y1 = -1 * np.ones(n_samples)
 
-# Class +1
-X2 = np.random.randn(n_samples, 2) * 0.8 + np.array([2, 2])
+# Class +1 (centered at (1, 1) with increased noise)
+X2 = np.random.randn(n_samples, 2) * 1.0 + np.array([1, 1])
 y2 = np.ones(n_samples)
 
-# Combine
+# Combine into one dataset
 X = np.vstack([X1, X2])
 y = np.hstack([y1, y2])
 
